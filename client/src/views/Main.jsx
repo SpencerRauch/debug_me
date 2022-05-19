@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import BugForm from '../components/BugForm'
-import BugList from './BugList';
+import BugList from '../components/BugList';
 
 
 const Main = () => {

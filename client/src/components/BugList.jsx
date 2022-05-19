@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import DeleteBtn from '../components/DeleteBtn';
+import DeleteBtn from './DeleteBtn';
 
 
 const BugList = (props) => {
