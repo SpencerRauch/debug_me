@@ -17,7 +17,7 @@ const BugList = (props) => {
     }
     return (
         <div>
-            {bugs.sort((a, b) => a.title.localeCompare(b.title)).map((bug, i) => {
+            {bugs.map((bug, i) => {
                 return <p key={i} className="d-flex justify-content-between">
                     <Link to={`/bugs/${bug._id}`}>{bug.title}</Link>
                     <DeleteBtn styles="btn btn-danger" onClickHandle = {deleteBug} id={bug._id}/>
