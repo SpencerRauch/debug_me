@@ -11,7 +11,7 @@ const BugList = (props) => {
         axios.delete('http://localhost:8000/api/bugs/' + id)
             .then(res => { 
                 let newBugs = bugs.filter(bug => bug._id !== id)
-                // setBugs(newBugs)
+
              })
             .catch(err => console.log(err))
     }
