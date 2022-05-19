@@ -33,10 +33,6 @@ const Detail = () => {
                     <td>{bug.title}</td>
                 </tr>
                 <tr>
-                    <td>Price:</td>
-                    <td>{bug.price}</td>
-                </tr>
-                <tr>
                     <td>Description:</td>
                     <td>{bug.description}</td>
                 </tr>

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useParams, useHistory } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import BugForm from '../components/BugForm';
 
 const Update = () => {
-    const history = useHistory();
+    const navigate= useNavigate();
     const { id } = useParams();
     const [bug, setBug]  = useState()
     const [error, setError] = useState({})
@@ -20,7 +20,7 @@ const Update = () => {
     }, [id])
     const updateBug = bugWithEdits => {
         axios.put('http://localhost:8000/api/bugs/' + id, bugWithEdits)
-            .then(res => history.push('/'))
+            .then(res => navigate('/'))
             .catch((err) => {
                 const {errors} = err.response.data
                 let errorObj = {}

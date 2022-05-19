@@ -1,4 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
+import Update from './views/Update';
+import Detail from './views/Detail';
+import Main from './views/Main';
 
 function App() {
   return (

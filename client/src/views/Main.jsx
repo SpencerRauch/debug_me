@@ -17,7 +17,7 @@ const Main = () => {
     }, [])
 
     const createBug = bug => {
-        axios.post('http://localhost:8000/api/bugs/create', bug)
+        axios.post('http://localhost:8000/api/bugs/', bug)
             .then((res) => {
                 let newBugs = [...bugs, res.data]
                 setBugs(newBugs)
