@@ -13,7 +13,6 @@ const Update = () => {
         .then(res => {
             setBug({
                 title: res.data.title, 
-                price: res.data.price,
                 description: res.data.description
             });
         })
