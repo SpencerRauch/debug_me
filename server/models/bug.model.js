@@ -6,10 +6,6 @@ const BugSchema = new mongoose.Schema({
         type: String,
         required: [true,"title required"]    
         },
-    squashed: {
-        type: Boolean,
-        required: [true,'squashed required']
-    },
     description: {
         type: String,
         required: [true, 'description required']

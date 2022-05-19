@@ -1,10 +1,9 @@
 const { Bug } = require('../models/bug.model')
 
 module.exports.createBug = (req, res) => {
-    const {title, squashed, description} = req.body;
+    const {title, description} = req.body;
     Bug.create({
         title,
-        squashed,
         description
     })
         .then(bug => res.json(bug))
