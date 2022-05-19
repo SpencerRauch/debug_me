@@ -10,14 +10,14 @@ const BugList = (props) => {
     const deleteBug = (id) => {
         axios.delete('http://localhost:8000/api/bugs/' + id)
             .then(res => { 
-                let newProds = bugs.filter(bug => bug._id !== id)
-                setBugs(newProds)
+                let newBugs = bugs.filter(bug => bug._id !== id)
+                // setBugs(newBugs)
              })
             .catch(err => console.log(err))
     }
     return (
         <div>
-            {bugs.sort((a, b) => a.title.localeCompare(b.title)).map((bug, i) => {
+            {bugs.map((bug, i) => {
                 return <p key={i} className="d-flex justify-content-between">
                     <Link to={`/bugs/${bug._id}`}>{bug.title}</Link>
                     <DeleteBtn styles="btn btn-danger" onClickHandle = {deleteBug} id={bug._id}/>
