@@ -6,7 +6,7 @@ import Main from './views/Main';
 function App() {
   return (
     <div className="container">
-      <h1>Bugs Squashin</h1>
+      <h1>Bug Manager</h1>
       <Routes>
         <Route path="/bugs/:id/edit" element={<Update/>} />
         <Route path="/bugs/:id" element={<Detail/>} />
