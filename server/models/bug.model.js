@@ -1,6 +1,5 @@
 const mongoose = require('mongoose')
-// mongoose.Schema.Types.Boolean.convertToFalse.add('off');
-// mongoose.Schema.Types.Boolean.convertToTrue.add('on');
+
 const BugSchema = new mongoose.Schema({
     title: {
         type: String,
