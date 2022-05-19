@@ -1,11 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-require('./config/mongoose.config');
+require('./server/config/mongoose.config');
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-require('./routes/bug.routes')(app);
+require('./server/routes/bug.routes')(app);
 
 const port = 8000;
 
